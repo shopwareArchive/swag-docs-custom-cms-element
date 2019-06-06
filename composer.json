@@ -1,0 +1,31 @@
+{
+    "name": "swag/custom-cms-element",
+    "description": "Example plugin which adds a custom element for the CMS",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shopware AG"
+        }
+    ],
+    "require": {
+        "shopware/platform": "dev-master"
+    },
+    "extra": {
+        "shopware-plugin-class": "Swag\\CustomCmsElement\\CustomCmsElement",
+        "label": {
+            "de-DE": "Label für das Plugin CustomCmsElement",
+            "en-GB": "Label for the plugin CustomCmsElement"
+        },
+        "description": {
+            "de-DE": "Beschreibung für das Plugin CustomCmsElement",
+            "en-GB": "Description for the plugin CustomCmsElement"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Swag\\CustomCmsElement\\": "src/"
+        }
+    }
+}

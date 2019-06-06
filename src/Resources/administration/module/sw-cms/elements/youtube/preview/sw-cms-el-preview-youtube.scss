@@ -1,0 +1,24 @@
+.sw-cms-el-preview-youtube {
+    .sw-cms-el-preview-youtube-img {
+        margin: 0;
+        display: block;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .sw-cms-el-preview-youtube-play {
+        $icon-height: 80px;
+        $icon-width: $icon-height;
+        position: absolute;
+        height: $icon-height;
+        width: $icon-width;
+
+        left: calc(50% - #{$icon-width/2});
+        top: calc(50% - #{$icon-height/2});
+
+        circle {
+            fill: #FF0000;
+            opacity: 0.9;
+        }
+    }
+}
