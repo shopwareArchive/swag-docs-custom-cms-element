@@ -15,11 +15,7 @@ Component.register('sw-cms-el-youtube', {
                 + this.element.config.videoSrc.value
                 + '?controls='
                 + (this.element.config.showControls.value ? 1 : 0);
-        },
-
-        showControls() {
-            return this.element.config.showControls.value;
-        },
+        }
     },
 
     created() {
@@ -29,6 +25,6 @@ Component.register('sw-cms-el-youtube', {
     methods: {
         createdComponent() {
             this.initElementConfig('youtube');
-        },
+        }
     }
 });
