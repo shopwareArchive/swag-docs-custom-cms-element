@@ -10,7 +10,9 @@
         }
     ],
     "require": {
-        "shopware/platform": "dev-master"
+        "shopware/core": "*",
+        "shopware/storefront": "*",
+        "shopware/administration": "*"
     },
     "extra": {
         "shopware-plugin-class": "Swag\\CustomCmsElement\\CustomCmsElement",
