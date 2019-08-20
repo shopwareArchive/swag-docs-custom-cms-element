@@ -1,6 +1,7 @@
-import { Component, Mixin } from 'src/core/shopware';
 import template from './sw-cms-el-youtube.html.twig';
 import './sw-cms-el-youtube.scss';
+
+const { Component, Mixin } = Shopware;
 
 Component.register('sw-cms-el-youtube', {
     template,
