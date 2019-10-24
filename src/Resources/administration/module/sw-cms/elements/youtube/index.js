@@ -1,9 +1,8 @@
-import { Application } from 'src/core/shopware';
 import './component';
 import './config';
 import './preview';
 
-Application.getContainer('service').cmsService.registerCmsElement({
+Shopware.Service('cmsService').registerCmsElement({
     name: 'youtube',
     label: 'YouTube Video',
     component: 'sw-cms-el-youtube',
