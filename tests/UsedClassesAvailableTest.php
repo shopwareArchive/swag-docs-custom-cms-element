@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Swag\CustomCmsElementTests;
+namespace Swag\CustomCmsElement\Tests;
 
 use Shopware\Core\Framework\Test\TestCaseBase\IntegrationTestBehaviour;
 use PHPUnit\Framework\TestCase;
@@ -14,8 +14,13 @@ class UsedClassesAvailableTest extends TestCase
     {
         $namespace = str_replace('Tests', '', __NAMESPACE__);
 
-        foreach ($this->getPluginClasses() as $class) {
-            $classRelativePath = str_replace(['.php', '/'], ['', '\\'], $class->getRelativePathname());
+        $files = $this->getPluginClasses();
+        foreach ($files as $file) {
+            if (!preg_match('/.*.php$/', $file->getRelativePathname())) {
+                continue;
+            }
+
+            $classRelativePath = str_replace(['.php', '/'], ['', '\\'], $file->getRelativePathname());
 
             $this->getMockBuilder($namespace . '\\' . $classRelativePath)
                 ->disableOriginalConstructor()
@@ -23,14 +28,15 @@ class UsedClassesAvailableTest extends TestCase
         }
 
         // Nothing broke so far, classes seem to be instantiable
-        $this->assertTrue(true);
+        static::assertCount(20, $files);
     }
 
     private function getPluginClasses(): Finder
     {
         $finder = new Finder();
-        $finder->in(realpath(__DIR__ . '/../'));
+        $finder->in(realpath(__DIR__ . '/../src'));
         $finder->exclude('Test');
-        return $finder->files()->name('*.php');
+
+        return $finder->files()->name('/.*\.(js|php|css|svg|jpg|twig|scss)$/');
     }
 }

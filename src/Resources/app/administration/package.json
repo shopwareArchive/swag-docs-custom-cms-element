@@ -1,0 +1,8 @@
+{
+    "name": "swagcustomcmselement",
+    "version": "1.0.0",
+    "description": "Add custom cms element",
+    "main": "index.js",
+    "author": "shopware AG",
+    "license": "MIT"
+}
