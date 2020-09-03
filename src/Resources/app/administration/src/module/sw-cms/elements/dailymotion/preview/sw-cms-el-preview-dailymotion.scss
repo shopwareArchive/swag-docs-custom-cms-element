@@ -1,14 +1,13 @@
-.sw-cms-el-preview-youtube {
+.sw-cms-el-preview-dailymotion {
     position: relative;
 
-    .sw-cms-el-preview-youtube-img {
-        margin: 0;
+    .sw-cms-el-preview-dailymotion-img {
         display: block;
         max-width: 100%;
     }
 
-    .sw-cms-el-preview-youtube-play {
-        $icon-height: 80px;
+    .sw-cms-el-preview-dailymotion-icon {
+        $icon-height: 50px;
         $icon-width: $icon-height;
         position: absolute;
         height: $icon-height;
@@ -16,10 +15,5 @@
 
         left: calc(50% - #{$icon-width/2});
         top: calc(50% - #{$icon-height/2});
-
-        circle {
-            fill: #FF0000;
-            opacity: 0.9;
-        }
     }
 }

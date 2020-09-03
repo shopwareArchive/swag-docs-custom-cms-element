@@ -1,2 +1,2 @@
-import './module/sw-cms/elements/youtube';
-import './app/component/form/swag-youtube-field';
+import './module/sw-cms/elements/dailymotion';
+import './app/component/form/swag-dailymotion-field';
