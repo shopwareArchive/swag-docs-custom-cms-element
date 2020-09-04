@@ -22,7 +22,7 @@ class UsedClassesAvailableTest extends TestCase
 
             $classRelativePath = str_replace(['.php', '/'], ['', '\\'], $file->getRelativePathname());
 
-            $this->getMockBuilder($namespace . '\\' . $classRelativePath)
+            $this->getMockBuilder($namespace . $classRelativePath)
                 ->disableOriginalConstructor()
                 ->getMock();
         }
